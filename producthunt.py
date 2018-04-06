@@ -3,9 +3,9 @@ import json
 from collections import OrderedDict
 
 URL = 'https://www.producthunt.com/feed'
-title = []
-link = []
-pub = []
+ph_title = []
+ph_link = []
+ph_pub = []
 
 def get_source():
 	try:
@@ -43,7 +43,7 @@ def parse_source(number_of_links=10):
 
 
 
-title, link, pub  = parse_source()
+ph_title, ph_link, ph_pub  = parse_source()
 
 feed_dict = OrderedDict()
 for i in range(len(title)):
